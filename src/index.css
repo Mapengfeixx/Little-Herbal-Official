@@ -9,7 +9,7 @@
   --color-primary-fixed-dim: #a8d38c;
   --color-on-primary-fixed: #092100;
   --color-on-primary-fixed-variant: #2c4f17;
-  
+
   --color-secondary: #5f5e5a;
   --color-on-secondary: #ffffff;
   --color-secondary-container: #e5e2dc;
@@ -18,7 +18,7 @@
   --color-secondary-fixed-dim: #c9c6c1;
   --color-on-secondary-fixed: #1c1c18;
   --color-on-secondary-fixed-variant: #474743;
-  
+
   --color-tertiary: #636037;
   --color-on-tertiary: #ffffff;
   --color-tertiary-container: #b1ad7d;
@@ -27,12 +27,12 @@
   --color-tertiary-fixed-dim: #cdc897;
   --color-on-tertiary-fixed: #1e1c00;
   --color-on-tertiary-fixed-variant: #4b4822;
-  
+
   --color-error: #ba1a1a;
   --color-on-error: #ffffff;
   --color-error-container: #ffdad6;
   --color-on-error-container: #93000a;
-  
+
   --color-surface: #f9faf1;
   --color-on-surface: #1a1c17;
   --color-surface-variant: #e2e3db;
@@ -48,10 +48,10 @@
   --color-inverse-surface: #2f312c;
   --color-inverse-on-surface: #f1f1e9;
   --color-inverse-primary: #a8d38c;
-  
+
   --color-background: #f9faf1;
   --color-on-background: #1a1c17;
-  
+
   --color-outline: #73796c;
   --color-outline-variant: #c3c9ba;
 
@@ -68,8 +68,12 @@
   --font-title-sm: "Plus Jakarta Sans", sans-serif;
   --font-guofeng: "Noto Serif SC", serif;
 
-  --shadow-paper: 0 4px 6px -1px rgba(100, 80, 50, 0.1), 0 2px 4px -1px rgba(100, 80, 50, 0.06);
-  --shadow-scroll: 0 10px 25px -5px rgba(100, 80, 50, 0.2), 0 8px 10px -6px rgba(100, 80, 50, 0.1);
+  --shadow-paper:
+    0 4px 6px -1px rgba(100, 80, 50, 0.1),
+    0 2px 4px -1px rgba(100, 80, 50, 0.06);
+  --shadow-scroll:
+    0 10px 25px -5px rgba(100, 80, 50, 0.2),
+    0 8px 10px -6px rgba(100, 80, 50, 0.1);
   --shadow-ai-glow: 0 0 15px rgba(67, 104, 45, 0.4);
 }
 
@@ -107,13 +111,17 @@
 
 /* Base custom classes from the HTML templates */
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -1,7 +1,13 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
+import React from "react";
+import Navigation from "../components/Navigation";
 
-export default function AiResult5({ navigate, uploadedImage }: { navigate: (view: string) => void, uploadedImage?: string | null }) {
+export default function AiResult5({
+  navigate,
+  uploadedImage,
+}: {
+  navigate: (view: string) => void;
+  uploadedImage?: string | null;
+}) {
   const customStyles = `
     .bg-guofeng-corners {
         background-color: var(--color-background);
@@ -78,32 +84,48 @@ export default function AiResult5({ navigate, uploadedImage }: { navigate: (view
 
       {/* Main Workspace (Fixed Layout) */}
       <main className="flex-grow flex flex-col items-center justify-center relative p-6 overflow-hidden z-10 w-full max-w-7xl mx-auto gap-6">
-        
         {/* Page Header */}
         <div className="w-full flex items-center justify-center relative shrink-0">
           <h1 className="text-headline-md font-headline-md text-on-surface-variant flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
+            <span
+              className="material-symbols-outlined text-primary"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              auto_awesome
+            </span>
             AI识别结果
           </h1>
         </div>
 
         {/* Bento Grid Layout for Content */}
         <div className="w-full h-full max-h-[70vh] grid grid-cols-1 md:grid-cols-12 gap-4 relative z-10">
-          
           {/* Left Column: Images */}
           <div className="md:col-span-5 h-full flex flex-col gap-3">
             {/* Top Image: User Upload */}
             <div className="paper-card rounded-xl w-full flex-1 min-h-0 p-3 flex flex-col relative">
               <div className="flex items-center gap-2 mb-2 px-1">
-                <span className="material-symbols-outlined text-outline" style={{ fontVariationSettings: "'FILL' 1" }}>photo_camera</span>
-                <span className="text-label-caps font-label-caps text-on-surface-variant">你拍摄的照片</span>
+                <span
+                  className="material-symbols-outlined text-outline"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  photo_camera
+                </span>
+                <span className="text-label-caps font-label-caps text-on-surface-variant">
+                  你拍摄的照片
+                </span>
               </div>
               <div className="card-content w-full flex-grow relative rounded-lg overflow-hidden border-2 border-dashed border-outline-variant bg-surface-container-lowest flex items-center justify-center min-h-[120px]">
                 {uploadedImage ? (
-                  <img src={uploadedImage} alt="上传的图片" className="absolute inset-0 w-full h-full object-cover" />
+                  <img
+                    src={uploadedImage}
+                    alt="上传的图片"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-outline">
-                    <span className="material-symbols-outlined text-4xl mb-1">image</span>
+                    <span className="material-symbols-outlined text-4xl mb-1">
+                      image
+                    </span>
                     <span className="text-xs">照片原图</span>
                   </div>
                 )}
@@ -113,14 +135,21 @@ export default function AiResult5({ navigate, uploadedImage }: { navigate: (view
             {/* Bottom Image: AI Match */}
             <div className="paper-card rounded-xl w-full flex-1 min-h-0 p-3 flex flex-col relative">
               <div className="flex items-center gap-2 mb-2 px-1">
-                <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
-                <span className="text-label-caps font-label-caps text-primary">匹配的图鉴</span>
+                <span
+                  className="material-symbols-outlined text-primary"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  auto_awesome
+                </span>
+                <span className="text-label-caps font-label-caps text-primary">
+                  匹配的图鉴
+                </span>
               </div>
               <div className="card-content w-full flex-grow relative rounded-lg overflow-hidden border-2 border-primary-container/50 bg-surface-container-lowest flex items-center justify-center min-h-[120px]">
-                <img 
-                  alt="茯苓" 
-                  className="absolute inset-0 w-full h-full object-cover" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB2MBranBa-zlov6GaK7oXcnamKZMOLMFfjj-gRiA7OHgTdnHbK2-fECWFJeExr_tkns64ZhrNwzWrz4R3V2DyON2tnJuD8IOFZ0ZZz_p5qt2QtmliwkeOk9GjYCGI1LQN6kKIQebIE27Ni7mC81GYzS8Frk34YlJZVOTU_3lYIDY9ERGwfALVWYpHRW9wi7Xfx_1TaRXEqC9q5hgIFxeFuIln62fXT6Qe_BiTOFxS0uY_hnzGqGqvGnsTUcvrw2LuTSHbSADzfxA" 
+                <img
+                  alt="茯苓"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src="/images/image_06b880d98f.png"
                 />
               </div>
             </div>
@@ -135,51 +164,74 @@ export default function AiResult5({ navigate, uploadedImage }: { navigate: (view
                 <div className="flex justify-between items-start border-b border-surface-variant pb-4 mb-2">
                   <div>
                     <div className="flex items-center gap-3">
-                      <h2 className="text-display-lg font-display-lg text-on-surface">茯苓</h2>
-                      <span className="text-title-sm font-title-sm text-outline">(Fú Líng)</span>
+                      <h2 className="text-display-lg font-display-lg text-on-surface">
+                        茯苓
+                      </h2>
+                      <span className="text-title-sm font-title-sm text-outline">
+                        (Fú Líng)
+                      </span>
                     </div>
                     <div className="flex gap-2 mt-2">
                       <span className="leaf-tag px-3 py-1 text-label-caps font-label-caps text-on-surface-variant flex items-center gap-1">
-                        <span className="material-symbols-outlined text-[14px]">eco</span>
+                        <span className="material-symbols-outlined text-[14px]">
+                          eco
+                        </span>
                         药食同源
                       </span>
                     </div>
                   </div>
                   {/* Decorative Stamp */}
-                  <div className="w-12 h-12 rounded bg-error-container text-error border-2 border-error/50 flex items-center justify-center text-label-caps font-bold rotate-12 opacity-80" style={{ fontFamily: 'Kaiti, serif' }}>
-                      鉴真
+                  <div
+                    className="w-12 h-12 rounded bg-error-container text-error border-2 border-error/50 flex items-center justify-center text-label-caps font-bold rotate-12 opacity-80"
+                    style={{ fontFamily: "Kaiti, serif" }}
+                  >
+                    鉴真
                   </div>
                 </div>
 
                 {/* Content Sections */}
                 <div className="flex-grow overflow-y-auto pr-2 space-y-4 custom-scrollbar">
-                  
                   {/* Feature */}
                   <div className="bg-surface-container-low rounded-lg p-3 border border-surface-variant">
                     <h3 className="text-title-sm font-title-sm text-primary flex items-center gap-2 mb-1">
-                      <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>visibility</span>
+                      <span
+                        className="material-symbols-outlined"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                      >
+                        visibility
+                      </span>
                       长什么样？
                     </h3>
                     <p className="text-body-base font-body-base text-on-surface-variant pl-8">
                       它们像一块块白色的小方砖，闻起来淡淡的，摸起来硬硬的，其实它们是长在松树根下的“小宝贝”。
                     </p>
                   </div>
-                  
+
                   {/* Story */}
                   <div className="bg-tertiary-container/20 rounded-lg p-3 border border-tertiary-fixed-dim">
                     <h3 className="text-title-sm font-title-sm text-tertiary flex items-center gap-2 mb-1">
-                      <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>menu_book</span>
+                      <span
+                        className="material-symbols-outlined"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                      >
+                        menu_book
+                      </span>
                       本草故事
                     </h3>
                     <p className="text-body-base font-body-base text-on-surface-variant pl-8">
                       茯苓被古人称为“四时神药”，因为它在春夏秋冬都能帮人们照顾身体，是全能的健康小管家。
                     </p>
                   </div>
-                  
+
                   {/* Culture */}
                   <div className="bg-secondary-container/30 rounded-lg p-3 border border-secondary-fixed-dim">
                     <h3 className="text-title-sm font-title-sm text-on-secondary-container flex items-center gap-2 mb-1">
-                      <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>restaurant</span>
+                      <span
+                        className="material-symbols-outlined"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                      >
+                        restaurant
+                      </span>
                       生活中的它
                     </h3>
                     <p className="text-body-base font-body-base text-on-surface-variant pl-8">
@@ -190,75 +242,111 @@ export default function AiResult5({ navigate, uploadedImage }: { navigate: (view
                   {/* Kid's Tip / Warning */}
                   <div className="bg-error-container/30 rounded-lg p-3 border border-error/20 mt-auto">
                     <h3 className="text-title-sm font-title-sm text-on-error-container flex items-center gap-2 mb-1">
-                      <span className="material-symbols-outlined text-error" style={{ fontVariationSettings: "'FILL' 1" }}>campaign</span>
+                      <span
+                        className="material-symbols-outlined text-error"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                      >
+                        campaign
+                      </span>
                       小提示
                     </h3>
                     <p className="text-body-base font-body-base text-on-error-container pl-8 font-medium">
                       认识本草很有趣，但不要随意采摘、品尝或使用不认识的植物哦！
                     </p>
                   </div>
-
                 </div>
               </div>
             </div>
 
             {/* Action Buttons Area */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 shrink-0">
-              <button onClick={() => navigate('atlas')} className="btn-primary rounded-xl py-3 px-4 flex flex-col items-center justify-center gap-1 min-h-[64px] col-span-2">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>library_add</span>
+              <button
+                onClick={() => navigate("atlas")}
+                className="btn-primary rounded-xl py-3 px-4 flex flex-col items-center justify-center gap-1 min-h-[64px] col-span-2"
+              >
+                <span
+                  className="material-symbols-outlined"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  library_add
+                </span>
                 <span className="font-bold text-sm">加入我的本草图鉴</span>
               </button>
               <button className="btn-secondary rounded-xl py-2 px-2 flex flex-col items-center justify-center gap-1 min-h-[64px]">
-                <span className="material-symbols-outlined">import_contacts</span>
+                <span className="material-symbols-outlined">
+                  import_contacts
+                </span>
                 <span className="text-xs font-bold">阅读它的故事</span>
               </button>
               <button className="btn-secondary rounded-xl py-2 px-2 flex flex-col items-center justify-center gap-1 min-h-[64px]">
-                <span className="material-symbols-outlined">sports_esports</span>
+                <span className="material-symbols-outlined">
+                  sports_esports
+                </span>
                 <span className="text-xs font-bold">开始相关闯关</span>
               </button>
             </div>
-            
           </div>
         </div>
 
         {/* Related Recommendations */}
         <div className="w-full shrink-0 flex items-center gap-4 z-10 pt-2 border-t border-outline-variant/30">
-            <span className="text-label-caps font-label-caps text-outline shrink-0">你可能还想认识：</span>
-            <div className="flex gap-3 overflow-x-auto pb-2 custom-scrollbar">
-                
-                {[
-                  { name: '山楂', icon: 'local_florist' },
-                  { name: '金银花', icon: 'spa' },
-                  { name: '薄荷', icon: 'grass' },
-                ].map((item, i) => (
-                  <div key={i} className="paper-card rounded-lg flex items-center gap-2 p-1.5 pr-3 cursor-pointer hover:bg-surface-container-low transition-colors min-w-fit">
-                      <div className="w-10 h-10 rounded bg-surface-variant overflow-hidden flex items-center justify-center">
-                          <span className="material-symbols-outlined text-primary">{item.icon}</span>
-                      </div>
-                      <span className="text-sm font-medium text-on-surface-variant">{item.name}</span>
-                  </div>
-                ))}
-            </div>
+          <span className="text-label-caps font-label-caps text-outline shrink-0">
+            你可能还想认识：
+          </span>
+          <div className="flex gap-3 overflow-x-auto pb-2 custom-scrollbar">
+            {[
+              { name: "山楂", icon: "local_florist" },
+              { name: "金银花", icon: "spa" },
+              { name: "薄荷", icon: "grass" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="paper-card rounded-lg flex items-center gap-2 p-1.5 pr-3 cursor-pointer hover:bg-surface-container-low transition-colors min-w-fit"
+              >
+                <div className="w-10 h-10 rounded bg-surface-variant overflow-hidden flex items-center justify-center">
+                  <span className="material-symbols-outlined text-primary">
+                    {item.icon}
+                  </span>
+                </div>
+                <span className="text-sm font-medium text-on-surface-variant">
+                  {item.name}
+                </span>
+              </div>
+            ))}
+          </div>
 
-            <button onClick={() => navigate('upload')} className="ml-auto flex items-center gap-1 text-sm font-bold text-primary hover:bg-primary-container/10 px-3 py-2 rounded-lg transition-colors shrink-0">
-                <span className="material-symbols-outlined text-[18px]">refresh</span>
-                重新识别
-            </button>
+          <button
+            onClick={() => navigate("upload")}
+            className="ml-auto flex items-center gap-1 text-sm font-bold text-primary hover:bg-primary-container/10 px-3 py-2 rounded-lg transition-colors shrink-0"
+          >
+            <span className="material-symbols-outlined text-[18px]">
+              refresh
+            </span>
+            重新识别
+          </button>
         </div>
-
       </main>
 
       {/* Footer */}
       <footer className="bg-surface-container border-t border-outline-variant w-full rounded-t-xl shrink-0 z-50">
         <div className="flex flex-col md:flex-row justify-between items-center py-2 px-6 w-full max-w-7xl mx-auto gap-3 text-center md:text-left">
           <div className="text-label-caps font-label-caps text-on-surface-variant">
-              © 2026 小小本草官 | 本平台仅用于传统文化学习与科普教育，不作为诊断、治疗或用药依据。
+            © 2026 小小本草官 |
+            本平台仅用于传统文化学习与科普教育，不作为诊断、治疗或用药依据。
           </div>
           <div className="flex gap-4">
-            <button className="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-all hover:opacity-80">关于我们</button>
-            <button className="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-all hover:opacity-80">使用协议</button>
-            <button className="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-all hover:opacity-80">隐私政策</button>
-            <button className="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-all hover:opacity-80">联系教师</button>
+            <button className="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-all hover:opacity-80">
+              关于我们
+            </button>
+            <button className="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-all hover:opacity-80">
+              使用协议
+            </button>
+            <button className="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-all hover:opacity-80">
+              隐私政策
+            </button>
+            <button className="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-all hover:opacity-80">
+              联系教师
+            </button>
           </div>
         </div>
       </footer>
