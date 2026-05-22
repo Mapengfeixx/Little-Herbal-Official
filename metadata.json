@@ -1,0 +1,8 @@
+{
+  "name": "Remix: 小小本草官2",
+  "description": "花费1天的时间调教AI，真的是难受啊",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
